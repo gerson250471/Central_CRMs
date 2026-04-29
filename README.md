@@ -15,7 +15,7 @@ O portal foi desenhado seguindo o conceito de **Micro-Frontends Desacoplados**:
 - **Tipografia:** Fonte Inter (Google Fonts).
 - **Iconografia:** Font Awesome 6.
 - **Hospedagem:** Hostinger (hPanel).
-- **Versionamento:** Git para controlo de alterações independentes do núcleo do CRM.
+- **Versionamento:** Git para controle de alterações independentes do núcleo do CRM.
 
 ## 📂 Estrutura de Pastas
 
@@ -34,7 +34,7 @@ Para integrar um novo CRM neste portal, siga o procedimento padrão da MAJB:
 
 Criar Diretório: Crie uma nova pasta na raiz do servidor com o nome do cliente (ex: /novo_cliente).
 
-Configurar Iframe: Copie o ficheiro index.html do Iframe blindado para a nova pasta e atualize o src com o link de Produção do Google Apps Script.
+Configurar Iframe: Copie o arquivo index.html do Iframe blindado para a nova pasta e atualize o src com o link de Produção do Google Apps Script.
 
 Ajustar Visual: Aplique o recuo de -28px no CSS do Iframe para ocultar o banner nativo do Google.
 
@@ -42,9 +42,9 @@ Atualizar Capa: Adicione um novo "Cartão de Acesso" no index.html principal apo
 
 ## 🛡️ Ambientes e Ciclo de Vida
 
-Produção: Acedido via majb.online.
+Produção: Acessado via majb.online.
 
-Homologação: Testes realizados via subdomínio homologacao.majb.online com base de dados isolada para garantir a segurança dos dados reais.
+Homologação: Testes realizados via subdomínio homologacao.majb.online com banco de dados isolado para garantir a segurança dos dados reais.
 
 "Tudo o que fizerem, façam de todo o coração, como para o Senhor." - Colossenses 3:23
 
