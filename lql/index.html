@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM LQL Soluções | MAJB Sistemas</title>
+
+    <link
+      rel="icon"
+      href="https://drive.google.com/uc?export=view&id=10QQWk4G51gOJjhx_WaWayUfXs1mgLoMl"
+      type="image/png"
+    />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #f8fafc;
+      }
+
+      #crm-frame {
+        width: 100vw;
+        /* Somamos 28px na altura total para compensar o que vamos puxar para cima */
+        height: calc(100vh + 28px);
+        border: none;
+        display: block;
+        /* TRUQUE DE MESTRE: Puxa o Iframe 28px para cima, escondendo o banner do Google */
+        margin-top: -28px;
+      }
+
+      #loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Inter", sans-serif;
+        color: #003399;
+        font-weight: bold;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Carregando o ambiente seguro...</div>
+
+    <iframe
+      id="crm-frame"
+      src="https://script.google.com/macros/s/AKfycbwCRmQqjskUBgj5qPm2gLj3kHP5yf9Bc8w7bIfnGRPDMZD6XhZiiwUXBP4A_Q9-fDQ30Q/exec"
+      allowfullscreen
+    >
+    </iframe>
+  </body>
+</html>
