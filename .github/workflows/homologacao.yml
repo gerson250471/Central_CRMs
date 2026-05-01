@@ -21,3 +21,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           # IMPORTANTE: ajuste o 'server-dir' para a sua pasta de homologação na Hostinger
           server-dir: public_html/homologacao/
+          # Novos parâmetros para evitar o Timeout
+          protocol: ftp
+          port: 21
+          timeout: 60000 # Aumenta o tempo de espera para 60 segundos
