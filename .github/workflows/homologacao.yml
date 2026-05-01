@@ -19,8 +19,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Use o ponto para indicar que deve subir na raiz onde o usuário já está
+          # IMPORTANTE: Pegue o conteúdo de dentro da pasta CRM'S
+          local-dir: ./CRM'S/
+          # Envie para a raiz do usuário de homologação
           server-dir: ./
           port: 21
           protocol: ftps
-          timeout: 60000 # Aumenta o tempo de espera para 60 segundos
+          timeout: 60000
