@@ -1,0 +1,23 @@
+name: Deploy Homologação (FTP)
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  web-deploy:
+    name: Deploy Web via FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Sync FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # IMPORTANTE: ajuste o 'server-dir' para a sua pasta de homologação na Hostinger
+          server-dir: domains/majb.online/public_html/homologacao/
