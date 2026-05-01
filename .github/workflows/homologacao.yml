@@ -22,5 +22,5 @@ jobs:
           # Use o ponto para indicar que deve subir na raiz onde o usuário já está
           server-dir: ./
           port: 21
-          protocol: ftp
+          protocol: ftps
           timeout: 60000 # Aumenta o tempo de espera para 60 segundos
