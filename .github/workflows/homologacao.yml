@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # IMPORTANTE: ajuste o 'server-dir' para a sua pasta de homologação na Hostinger
-          server-dir: domains/majb.online/public_html/homologacao/
+          server-dir: public_html/homologacao/
