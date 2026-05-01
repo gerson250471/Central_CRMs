@@ -19,8 +19,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # IMPORTANTE: Pegue o conteúdo de dentro da pasta CRM'S
-          local-dir: ./CRM'S/
           # Envie para a raiz do usuário de homologação
           server-dir: ./
           port: 21
