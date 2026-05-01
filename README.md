@@ -20,6 +20,7 @@ O portal foi desenhado seguindo o conceito de **Micro-Frontends Desacoplados**:
 ## 📂 Estrutura de Pastas
 
 ```text
+vou mudar
 / (raiz)
 ├── index.html           # Landing Page principal da MAJB Sistemas
 ├── .gitignore           # Ignora pastas de desenvolvimento e CRMs específicos
