@@ -3,7 +3,7 @@ name: Deploy Homologacao ⚠️
 on:
   push:
     branches:
-      - homologacao
+      - develop
 
 jobs:
   deploy:
