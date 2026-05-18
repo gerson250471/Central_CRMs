@@ -1,0 +1,29 @@
+name: Deploy Homologacao ⚠️
+
+on:
+  push:
+    branches:
+      - homologacao
+
+jobs:
+  deploy:
+    name: Sincronizar com Hostinger (Subdomínio)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/homologacao/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github*/**
+            **/_lql/**
+            README.md
+            appsscript.json

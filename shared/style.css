@@ -1,0 +1,64 @@
+/* 
+   MAJB Sistemas - Design System Centralizado
+   Localização: https://majb.online/shared/style.css 
+*/
+
+:root {
+    --primary-color: #003399;    /* Azul MAJB */
+    --secondary-color: #facc15;  /* Amarelo Homologação */
+    --text-dark: #1f2937;
+    --bg-light: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização da Faixa de Homologação */
+.faixa-homologacao {
+    background-color: var(--secondary-color);
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Container do Logotipo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px 20px 20px;
+}
+
+.logo-cliente {
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estilos de Botões Padrão */
+.btn-majb {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-majb:hover {
+    opacity: 0.9;
+}
