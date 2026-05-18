@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRM LQL Soluções | MAJB Sistemas</title>
 
-    <!-- Ícone corrigido usando o caminho absoluto MAJB -->
     <link
       rel="icon"
       href="https://majb.online/shared/logo_LQL.png"
@@ -25,12 +24,11 @@
 
       #crm-frame {
         width: 100vw;
-        /* Somamos 28px na altura total para compensar o que vamos puxar para cima */
         height: calc(100vh + 28px);
         border: none;
         display: block;
-        /* TRUQUE DE MESTRE: Puxa o Iframe 28px para cima, escondendo o banner do Google */
-        margin-top: 0px;
+        /* TRUQUE DE MESTRE: Puxa o Iframe 28px para cima (valor negativo) */
+        margin-top: -28px;
       }
 
       #loading {
@@ -48,11 +46,24 @@
   <body>
     <div id="loading">Carregando o ambiente seguro...</div>
 
-    <iframe
-      id="crm-frame"
-      src="Meu_Link_Google_AppsScript_Aqui"
-      allowfullscreen
-    >
-    </iframe>
+    <iframe id="crm-frame" src="" allowfullscreen> </iframe>
+
+    <script>
+      // Roteamento inteligente de ambientes MAJB
+      const urlAtual = window.location.hostname;
+      const iframe = document.getElementById("crm-frame");
+
+      // Substitua com os Web Apps gerados no Google Apps Script
+      const gasProducao = "Meu_Link_Google_Apps_Script_Producao";
+      const gasHomologacao = "Meu_Link_Google_Apps_Script_Homologacao";
+
+      if (urlAtual.includes("homologacao")) {
+        // Se detectar a palavra homologacao na URL, puxa o sistema de testes
+        iframe.src = gasHomologacao;
+      } else {
+        // Caso contrário, puxa o sistema oficial
+        iframe.src = gasProducao;
+      }
+    </script>
   </body>
 </html>
